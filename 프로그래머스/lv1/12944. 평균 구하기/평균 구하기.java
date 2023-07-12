@@ -5,5 +5,7 @@ class Solution {
             answer+=i;
         }
         return answer/arr.length;
+        //stream
+        //return Arrays.stream(arr).average().getAsDouble();
     }
 }
