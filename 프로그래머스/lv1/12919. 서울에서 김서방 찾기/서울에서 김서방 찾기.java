@@ -5,6 +5,8 @@ class Solution {
             if(seoul[i].equals("Kim"))
                 idx=i;
         }
-        return "김서방은 "+idx+"에 있다";
+        StringBuilder sb=new StringBuilder();
+        sb.append("김서방은 ").append(idx).append("에 있다");
+        return sb.toString();
     }
 }
