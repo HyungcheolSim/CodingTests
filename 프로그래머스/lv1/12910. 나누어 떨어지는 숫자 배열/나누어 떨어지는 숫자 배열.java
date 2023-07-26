@@ -1,18 +1,9 @@
-import java.util.*;
+import java.util.Arrays;
 class Solution {
     public int[] solution(int[] arr, int divisor) {
-        List<Integer> list=new ArrayList<>();
-        boolean isDivided=false;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]%divisor==0){
-                isDivided=true;
-                list.add(arr[i]);
-            }
-        }
-        if(!isDivided){
-            int[] intArr={-1};
-            return intArr;
-        }
-        return list.stream().sorted().mapToInt(x->x).toArray();
+        int[] answer = Arrays.stream(arr).filter(factor -> factor % divisor == 0).toArray();
+          if(answer.length == 0) answer = new int[] {-1};
+          Arrays.sort(answer);
+          return answer;
     }
 }
