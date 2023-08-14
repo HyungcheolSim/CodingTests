@@ -1,14 +1,10 @@
 class Solution {
     public String solution(int age) {
-        String answer = "";
-
+        StringBuilder sb =new StringBuilder();
         while(age>0){
-            char ch='a';    
-            ch+=age%10;
-            
-            answer=ch+answer;
+            sb.insert(0,(char)((age%10)+(int)'a'));
             age/=10;
-        }   
-        return answer;
+        }
+        return sb.toString();
     }
 }
