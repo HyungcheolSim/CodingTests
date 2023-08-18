@@ -1,12 +1,16 @@
 class Solution {
     public int solution(int order) {
-        String str= String.valueOf(order);
-        int count=0;
-        for(int i=0;i<str.length();i++){
-            if(str.charAt(i)=='3'||str.charAt(i)=='6'||str.charAt(i)=='9'){
-                count++;
-            }
+    int answer = 0;
+    int count = 0;
+
+    while(order != 0) {
+        if(order % 10 == 3 || order % 10 == 6 || order % 10 == 9) {
+        count++;
         }
-        return count;
+        order /= 10;
+    }
+
+    answer = count;
+    return answer;
     }
 }
