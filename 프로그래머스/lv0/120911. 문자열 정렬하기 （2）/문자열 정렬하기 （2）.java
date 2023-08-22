@@ -1,12 +1,10 @@
 import java.util.*;
 class Solution {
     public String solution(String my_string) {
-        String[] strArr=my_string.toLowerCase().split("");
-        StringBuilder sb=new StringBuilder();
+        char[] strArr=my_string.toLowerCase().toCharArray();
+        
         Arrays.sort(strArr);
-        for(String s:strArr)
-            sb.append(s);
-        return sb.toString();
+        return String.valueOf(strArr);
         
     }
 }
