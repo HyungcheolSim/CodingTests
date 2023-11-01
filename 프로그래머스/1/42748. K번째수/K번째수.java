@@ -1,7 +1,7 @@
 import java.util.Arrays;
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
-        //알고리즘 사용 안한 풀이
+        //쉘 정렬 https://st-lab.tistory.com/209
         int[] answer=new int[commands.length];
         
         for(int h=0;h<commands.length;h++){
@@ -11,9 +11,36 @@ class Solution {
                 tempArr[tIdx]=array[i]; //1~4
                 tIdx++;
             }
-            Arrays.sort(tempArr);
+            shell_sort(tempArr,tempArr.length);
             answer[h]=tempArr[commands[h][2]-1];
         }
         return answer;
     }
+    private final static int[] gap = 
+		{ 1, 4, 10, 23, 57, 132, 301, 701, 1750};
+
+	private static int getGap(int length) {
+		int index = 0;
+		int len = (int)(length / 2.25);	
+		while (gap[index] < len) {
+			index++;
+		}
+		return index;
+	}
+    private static void swap(int[] a, int i, int j) {
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+    }
+    private static void shell_sort(int[] a, int size) {
+		int gapIndex = getGap(size);
+		while(gapIndex >= 0) {
+			int step = gap[gapIndex--];
+			for(int i = step; i < size; i++) {
+				for (int j = i; j >= step && a[j] < a[j - step]; j -= step) {
+					swap(a, j, j - step);
+				}
+			}
+		}
+	}
 }
