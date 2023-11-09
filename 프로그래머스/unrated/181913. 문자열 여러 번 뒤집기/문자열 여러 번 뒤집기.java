@@ -1,11 +1,10 @@
 class Solution {
-    public String solution(String my_string, int[][] queries) {
-        StringBuffer my_string2=new StringBuffer(my_string);
-        for(int[] k:queries){
-            StringBuffer sb= new StringBuffer(my_string2.substring(k[0],k[1]+1));
-            my_string2.replace(k[0],k[1]+1,sb.reverse().toString());
-            //my_string=my_string.replace(sb.toString(),sb.reverse().toString());
+    public String solution(String myString, int[][] queries) {
+        for (int[] arr : queries) {
+            myString = myString.substring(0, arr[0]) 
+                + new StringBuilder(myString.substring(arr[0], arr[1] + 1)).reverse().toString() 
+                + myString.substring(arr[1] + 1);
         }
-        return my_string2.toString();
+        return myString;
     }
 }
