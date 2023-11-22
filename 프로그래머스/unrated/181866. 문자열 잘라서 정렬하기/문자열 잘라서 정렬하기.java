@@ -3,7 +3,7 @@ class Solution {
     public String[] solution(String myString) {
         List<String> list =new ArrayList();
         for(String s:myString.replace("xx","x").split("x")){
-            if(s.equals("")){
+            if(s.isEmpty()){
                continue; 
             }
             list.add(s);
