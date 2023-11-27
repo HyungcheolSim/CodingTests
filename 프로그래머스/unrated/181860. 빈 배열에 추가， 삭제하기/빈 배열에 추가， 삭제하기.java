@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.LinkedList;
 class Solution {
     public int[] solution(int[] arr, boolean[] flag) {
         LinkedList<Integer> list =new LinkedList();
@@ -13,6 +13,10 @@ class Solution {
                 }
             }
         }
-        return list.stream().mapToInt(x->x).toArray();
+        int[] answer=new int[list.size()];
+        for(int i=0;i<answer.length;i++){
+            answer[i]=list.get(i);
+        }
+        return answer;
     }
 }
