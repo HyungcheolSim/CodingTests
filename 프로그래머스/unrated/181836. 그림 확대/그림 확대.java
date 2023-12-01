@@ -10,9 +10,8 @@ class Solution {
             }
             int j=0;
             while(j<k){
-                answer[idx]= sb.toString();
+                answer[idx++]= sb.toString();
                 j++;
-                idx++;
             }
         }
         return answer;
