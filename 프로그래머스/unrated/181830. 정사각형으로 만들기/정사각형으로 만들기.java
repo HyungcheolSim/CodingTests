@@ -1,13 +1,10 @@
 class Solution {
     public int[][] solution(int[][] arr) {
-        int row=arr.length;
-        int col=arr[0].length;
-        
-        int max=Math.max(row,col);
+        int max = (arr.length >= arr[0].length) ? arr.length : arr[0].length;
         int[][] answer = new int[max][max];
         //int 배열의 기본 초기화는 0
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
                 answer[i][j]=arr[i][j];
             }
         }
