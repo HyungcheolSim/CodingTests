@@ -1,2 +1,11 @@
 # CodingTests
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+
+### 23.12.05 학습 현황
+1일 1Lv 2문제 최신순으로 푸는 중
+주 1회 코테 스터디원들과 1주일 간 푼 문제(10문제) 리뷰
+
+### 해결 문제 수
+0Lv 223 문제
+1Lv 49 문제
+2Lv 8 문제
+3Lv 1 문제 
