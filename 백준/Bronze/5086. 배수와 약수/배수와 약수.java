@@ -1,21 +1,21 @@
-import java.util.Scanner;
-public class Main{
-    public static void main(String[] args){
-        Scanner scan=new Scanner(System.in);
-        int a=0,b=0;
-        while(true){
-            a=scan.nextInt();
-            b= scan.nextInt();
-            if(a==b&&b==0)
-                break;
-            //케이스 1: a가 b의 약수
-            //케이스 2: a가 b의 배수
-            //케이스 3: else
-            if(a<=b&&b%a==0){
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+
+        while (!(line = reader.readLine()).equals("0 0")) {
+            String[] parts = line.split(" ");
+            int a = Integer.parseInt(parts[0]), b = Integer.parseInt(parts[1]);
+
+            if (b % a == 0) {
                 System.out.println("factor");
-            }else if(b<=a&&a%b==0){
+            } else if (a % b == 0) {
                 System.out.println("multiple");
-            }else{
+            } else {
                 System.out.println("neither");
             }
         }
