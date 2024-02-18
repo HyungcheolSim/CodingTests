@@ -16,9 +16,14 @@ public class Main{
         // 정렬
         Arrays.sort(arr);
         // 출력
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        bw.flush();
         for(int n:arr){
-            System.out.println(n);
+            bw.write(n+"");
+            bw.newLine();
         }
         br.close();
+        bw.flush();
+        bw.close();
     }
 }
