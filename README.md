@@ -8,5 +8,5 @@
 
 #### 2월
 문제 선택: [백준 브론즈3 이상/ 프로그래머스 0Lv 답 봤던 문제들 다시 풀기] <br>
-목표: [백준 (solved.ac)](https://solved.ac/class?class=2) SILVER 4 달성하기 <br> 성공!!!
+목표: [백준 (solved.ac)](https://solved.ac/class?class=2) SILVER 4 달성하기 !!!성공!!!<br> 
 학습량: 주 5문제 이상
