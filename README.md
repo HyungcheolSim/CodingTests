@@ -10,3 +10,9 @@
 문제 선택: [백준 브론즈3 이상/ 프로그래머스 0Lv 답 봤던 문제들 다시 풀기] <br>
 목표: [백준 (solved.ac)](https://solved.ac/class?class=2) SILVER 4 달성하기 !!!성공!!!<br> 
 학습량: 주 5문제 이상
+
+
+### 3월
+문제 선택: 단계별 문제 풀어보기 + 해당하는 알고리즘 확실하게 학습
+목표: [백준 (solved.ac)](https://solved.ac/profile/sim3412) SILVER 3 달성하기
+학습량: 주 5문제 이상
