@@ -15,5 +15,11 @@
 ### 3월
 문제 선택: 단계별 문제 풀어보기 + 해당하는 알고리즘 확실하게 학습 <br> 
 목표: [백준 (solved.ac)](https://solved.ac/profile/sim3412) SILVER 3 달성하기 - 3/7 달성 <br> 
-목표2: CLASS 3 달성
+목표2: CLASS 3 달성 (50%)
+학습량: 주 5문제 이상
+
+### 4월
+문제 선택: CLASS 3+ 문제까지
+목표: [백준 (solved.ac)](https://solved.ac/profile/sim3412)
+목표2: CLASS 3+ 달성 & SLIVER 1 달성
 학습량: 주 5문제 이상
