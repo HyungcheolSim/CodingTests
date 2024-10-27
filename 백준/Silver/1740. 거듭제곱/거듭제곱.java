@@ -4,23 +4,21 @@ import java.io.InputStreamReader;
 public class Main {
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static void main(String[] args) throws IOException {
-       long input = Long.parseLong(br.readLine());
+        long input = Long.parseLong(br.readLine());
 
         long ans = 0L;
-        while (input > 0L) {
-            long tempCnt = 0L;
-            long num = 1L;
-            while (input >= num * 2L) {
-                num *= 2L;
-                tempCnt++;
+        String str = Long.toBinaryString(input);
+        int cnt = 0;
+        for (int i = str.length() - 1; i >= 0; i--, cnt++) {
+            if (str.charAt(i) == '0') {
+                continue;
             }
-            input -= num;
 
-            long powNum = 1L;
-            for (int i = 0; i < tempCnt; i++) {
-                powNum *= 3;
+            long subsum = 1;
+            for (int w = 0; w < cnt; w++) {
+                subsum *= 3;
             }
-            ans += powNum;
+            ans += subsum;
         }
         System.out.println(ans);
     }
