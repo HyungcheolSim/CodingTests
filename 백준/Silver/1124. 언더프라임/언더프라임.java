@@ -4,45 +4,41 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
+    static int S, E;
+    static int count = 0;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int S = Integer.parseInt(st.nextToken());
-        int E = Integer.parseInt(st.nextToken());
-
-        boolean[] prime = new boolean[E + 1];
-        prime[0] = prime[1] = true;
-
-        for (int i = 2; i <= Math.sqrt(prime.length); i++) {
-            if (prime[i]) continue;
-            for (int j = i * i; j < prime.length; j += i) {
-                prime[j] = true;
-            }
-        }
-        int count = 0;
+        S = Integer.parseInt(st.nextToken());
+        E = Integer.parseInt(st.nextToken());
 
         for (int num = S; num <= E; num++) {
-
-            if (prime[num]) {
-                int size = getPrimeFact(num);
-                if ( size>0 && !prime[size])
-                    count++;
-            }
+            int size = getPrimeFact(num);
+            if (isPrime(size))
+                count++;
         }
         System.out.println(count);
     }
 
     static int getPrimeFact(int num) {
         int count = 0;
-        int i = 2;
-        while (num > 1) {
-            if (num % i == 0) {
-                num /= i;
+
+        for (int d = 2; d <= Math.sqrt(num); d++) {
+            while (num % d == 0) {
+                num /= d;
                 count++;
-            }else{
-                i++;
             }
         }
+        if (num != 1) count++;
         return count;
+    }
+
+    static boolean isPrime(int underPrime) {
+        if (underPrime < 2) return false;
+        for (int i = 2; i <= Math.sqrt(underPrime); i++) {
+            if (underPrime % i == 0) return false;
+        }
+        return true;
     }
 }
